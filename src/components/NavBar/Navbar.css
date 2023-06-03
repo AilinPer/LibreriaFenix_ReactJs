@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+}
+.Nav{
+    width: 100%;
+    background-color: rgb(193, 148, 235);
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+li{
+    list-style: none;
+    margin: 3% 3%;
+    color: white;
+}
+a{
+    color: white;
+}

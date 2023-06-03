@@ -1,0 +1,9 @@
+img{
+    width: 100%;
+}
+.carrito{
+    display: flex;
+}
+p{
+    padding-right: 2%;
+}

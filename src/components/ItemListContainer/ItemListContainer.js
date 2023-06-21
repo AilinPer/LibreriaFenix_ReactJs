@@ -1,10 +1,20 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "./ItemListContainer.css"
+import productos from '../productos.json'
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
+    const [chars, setChars] = useState([])
+
+    useEffect(() =>{
+        fetch({productos})
+        .then((Response) => Response.json())
+        .then((json) => console.log(json.resultado))
+    })
+
+
     return (
         <div>
-            <p className='texto'>{greeting}</p>
+            <h1>LIBROS</h1>
         </div>
     )
 }

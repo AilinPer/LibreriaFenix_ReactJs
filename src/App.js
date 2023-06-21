@@ -5,6 +5,7 @@ import "../src/App.css";
 import Navbar  from "./components/NavBar/Navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
+
 class App extends React.Component {
   render(){
     return (
@@ -13,9 +14,8 @@ class App extends React.Component {
           <Navbar />
         </div>
 
-        <div>
-          <ItemListContainer greeting="Aqui se mostraran los libros"/>
-        </div>
+      <ItemListContainer/>
+
       </>
     )
   }

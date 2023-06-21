@@ -1,16 +1,19 @@
 import React from 'react'
 import "./Navbar.css"
 import CardWidget from '../CardWidget/CardWidget'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return (
         <nav className='Nav'>
-            <img className='logo' src='https://e7.pngegg.com/pngimages/973/11/png-clipart-phoenix-logo-design-mark-phoenix.png' alt='imagen'/>
+            <Link className='logo' to="/"><img  src='https://e7.pngegg.com/pngimages/973/11/png-clipart-phoenix-logo-design-mark-phoenix.png' alt='imagen'/></Link>
             <ul>
-                <li> <a href='https://www.youtube.com/'>Inicio</a></li>
-                <li><a href='https://www.youtube.com/'>Filtrado</a></li>
-                <li><a href='https://www.youtube.com/'>Contacto</a></li>
-                <li><CardWidget/></li>
+                <Link className='li' to="/"> Inicio </Link>
+                <Link className='li' to="/Filtrado"> Filtrado </Link>
+                <Link className='li' to="/Contacto"> Contacto </Link>
+                <Link className='li' to="/Carrito"> <CardWidget/> </Link>
+                <Link className='li' to="/Carrito"> Fantasia </Link>
+                <Link className='li' to="/Carrito"> Terror </Link>
             </ul>
         </nav>
     )

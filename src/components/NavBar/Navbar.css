@@ -18,7 +18,7 @@ ul{
     justify-content: flex-end;
     align-items: center;
 }
-li{
+.li{
     list-style: none;
     margin: 3% 7%;
     color: white;

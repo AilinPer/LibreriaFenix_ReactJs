@@ -1,33 +1,24 @@
 import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import CardUser from '../../CardUser/CardUser'
+import "./ItemDetailContainer.css"
 
 const ItemDetailContainer = () => {
-  const [char, setChar] = useState([])
+  const [char, setChar] = useState({})
 
 let { id } = useParams()
 
-console.log(char)
-
-  useEffect(() =>{
-    fetch(`/productos.json/${id}`)
-    .then((response) =>{
-      if (!response.ok){
-        throw new Error("Error");
-      }
-      return response.json()
-    })
-    .then((json) => setChar(json.resultado))
-    .catch((error) => {
-      console.log(error)
-    })
-  }, [id])
+useEffect(() =>{
+  fetch('/productos.json')
+  .then((Response) => Response.json())
+  .then((json) => setChar(json.resultado.find(item => item.id === parseInt(id))))
+},[id])
 
   return (
-    <div>
-        {
-          char.id ? <CardUser char={char}/> : null 
-        }
+    <div className='tarjeta-detalle'>
+      {
+        char.id ? <CardUser char={char}/> : null 
+      }
     </div>
   )
 }

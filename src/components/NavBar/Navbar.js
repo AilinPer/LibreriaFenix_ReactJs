@@ -11,9 +11,9 @@ const Navbar = () => {
                 <Link className='li' to="/"> Inicio </Link>
                 <Link className='li' to="/Filtrado"> Filtrado </Link>
                 <Link className='li' to="/Contacto"> Contacto </Link>
+                <Link className='li' to="/Category/fantasia"> Fantasia </Link>
+                <Link className='li' to="/Category/terror"> Terror </Link>
                 <Link className='li' to="/Carrito"> <CardWidget/> </Link>
-                <Link className='li' to="/Carrito"> Fantasia </Link>
-                <Link className='li' to="/Carrito"> Terror </Link>
             </ul>
         </nav>
     )

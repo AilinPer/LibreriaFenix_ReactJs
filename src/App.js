@@ -11,6 +11,7 @@ import ContactoPages from "./components/pages/ContactoPages/ContactoPages";
 import InicioPages from "./components/pages/InicioPages/InicioPages";
 import FiltradoPages from "./components/pages/FiltradoPages/FiltradoPages";
 import ItemDetailContainer from "./components/pages/ItemDetailContainer/ItemDetailContainer";
+import Category from "./components/pages/Category/Category";
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/Filtrado" element={<FiltradoPages/>}/>
             <Route path="/Contacto" element={<ContactoPages/>}/>
             <Route path="/Detail/:id" element={<ItemDetailContainer/>}/>
+            <Route path="/Category/:categoriaid" element={<Category/>}/>
           </Routes>
         </div>
       </Router>
